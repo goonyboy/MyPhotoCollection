@@ -1,15 +1,31 @@
+//Открытие изображение при нажатии на него
+
+document.querySelectorAll('.card img').forEach(img => {
+  img.onclick = () => {
+    document.querySelector('.pop-up').style.display = 'block';
+    document.querySelector('.pop-up img').src = img.getAttribute('src')
+  }
+});
+
+//Закрытие изображения по нажатию на крестик
+document.querySelector('.pop-up span').onclick = () => {
+  document.querySelector('.pop-up').style.display = 'none';
+};
+
+// document.addEventListener('keypress', e => {
+//   if (e.keyCode == 27) document.querySelector('.pop-up').style.display = 'none';
+// });
+
+
 //Бургер меню с помощью добавления класса open header'у
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("burger").addEventListener("click", function () {
     document.querySelector("header").classList.toggle("open")
   })
-})
+});
 
 //Сортировка массива по алфавиту (сортировка пузырьком)
 
-// let sortByName = document.querySelector('#sort');
-// replaceNode = sortByName.replaceChild(sort.children[1], sort.children[0]);
-// sortByName.appendChild(replaceNode);
 document.querySelector('#sort-asc').onclick = mySort;
 document.querySelector('#sort-desc').onclick = mySortDesc;
 
@@ -24,7 +40,7 @@ function mySort() {
 
     }
   }
-}
+};
 
 function mySortDesc() {
   let sortByName = document.querySelector('#sort');
@@ -37,8 +53,10 @@ function mySortDesc() {
 
     }
   }
-}
+};
 
 function insertAfter(elem, refElem) {
   return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
-}
+};
+
+
