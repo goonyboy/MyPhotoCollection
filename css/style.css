@@ -316,7 +316,7 @@ header.open .header__burger-btn span:nth-child(3) {
   position: absolute;
   width: 100%;
   left:0;
-  bottom: 15%; /* Отступ сверху */
+  top: 50%; /* Отступ сверху */
   text-align: center;
   opacity: 0;
   transition: opacity .35s ease;
@@ -325,7 +325,7 @@ header.open .header__burger-btn span:nth-child(3) {
 .grid .card .button a {
   padding: 0.2em 1em; /* Отступ */
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Цвет кнопки */
+  background: #324e7b; /* Цвет кнопки */
   color: white; /* Цвет текста */
   border-radius: 10px;
   z-index: 1;
@@ -334,6 +334,9 @@ header.open .header__burger-btn span:nth-child(3) {
 
 .grid .card:hover .button {
   opacity: 1;
+}
+.grid .card:hover img {
+  cursor: pointer;
 }
 
 .grid .card .button:hover {
